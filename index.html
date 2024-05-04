@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Telosfrontend cuoiki</title>
+    <link href="./css/output.css" rel="stylesheet" />
+    <script>
+      function openMobileMenu() {
+        document.getElementById("MobileMenu").style.display = "flex";
+      }
+
+      function closeMobileMenu() {
+        document.getElementById("MobileMenu").style.display = "none";
+      }
+    </script>
+  </head>
+  <body>
+    <div class="flex flex-col pt-5">
+      <!--Phần 1-->
+      <div class="flex px-16 items-center justify-between h-18">
+        <img src="image/logo.png" alt="" class="mr-auto" />
+        <nav class="hidden md:flex gap-8">
+          <div>About</div>
+          <div>Services</div>
+          <div>Blog</div>
+          <div>Jobs</div>
+          <div>Contact</div>
+        </nav>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-6 h-6 block md:hidden"
+          onclick="openMobileMenu()"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+          />
+        </svg>
+
+        <div
+          id="MobileMenu"
+          class="z-20 fixed top-0 left-0 w-full h-full bg-[#000000d0] hidden justify-end"
+        >
+          <nav
+            class="flex flex-col bg-violet-950 w-[300px] h-full text-white items-end gap-y-4 p-8"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6 block md:hidden"
+              onclick="closeMobileMenu()"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 18 18 6M6 6l12 12"
+              />
+            </svg>
+
+            <div>About</div>
+            <div>Services</div>
+            <div>Blog</div>
+            <div>Jobs</div>
+            <div>Contact</div>
+          </nav>
+        </div>
+      </div>
+
+      <!--Phần 2-->
+      <div class="flex flex-col items-center gap-y-8 py-20">
+        <div
+          class="lg:box-border lg:w-[1110px] font-sans md:text-7xl text-5xl font-bold text-center leading-snug"
+        >
+          Track your product sales from anywhere, anytime.
+        </div>
+        <div
+          class="bg-purple-600 text-white flex justify-center items-center box-border w-40 h-12 p-4 rounded-md"
+        >
+          Start selling
+        </div>
+      </div>
+
+      <div class="flex flex-col justify-end items-center pt-20">
+        <img
+          src="image/iPhoneX.png"
+          alt=""
+          class="z-10"
+          style="filter: drop-shadow(5px -5px 5px #29292a70)"
+        />
+
+        <div
+          class="z-0 box-border w-[1200px] h-[200px] absolute overflow-hidden"
+        >
+          <div
+            class="bg-purple-300 flex justify-center items-center box-border w-[1200px] h-[1200px] rounded-full"
+          ></div>
+        </div>
+      </div>
+    </div>
+
+    <!--Phần 3 dùng flex
+      </div>
+
+      <div class="flex md:flex-row flex-col justify-center items-center gap-x-8 pt-20">
+      <div class="flex flex-col gap-y-2 box-border w-[300px]">
+
+        <div class="font-sans text-5xl font-bold text-left leading-tight">
+            1,500,000+
+          </div>
+
+          <div class="font-sans text-left">
+            Customers who use Landify UI Kit to build their new startup landing page.
+          </div> 
+
+      </div>
+
+      <div class="flex md:flex-row md:gap-y-8 flex-col gap-x-8">
+        <div class="flex md:flex-col flex-row">
+            <img src="image/AirbnbLogo.png" alt="">
+            <img src="image/GoogleLogo.png" alt="">
+        </div>
+        <div class="flex md:flex-col flex-row" >
+            <img src="image/AmazonLogo.png" alt="">
+            <img src="image/OLALogo.png" alt="">
+        </div>
+        <div class="flex md:flex-col flex-row" >
+            <img src="image/FedExLogo.png" alt="">
+            <img src="image/WalmartLogo.png" alt="">
+        </div>
+        <div class="flex md:flex-col flex-row " >
+            <img src="image/Microsoft Logo.png" alt="">
+            <img src="image/OYOLogo.png" alt="">
+        </div>
+
+      </div>
+    </div>
+-->
+
+    <!--Phần 3 dùng grid-->
+    <div
+      class="flex md:flex-row flex-col items-center justify-center gap-x-8 gap-y-8 py-16"
+    >
+      <div class="flex flex-col gap-y-2 box-border w-[300px]">
+        <div
+          class="font-sans md:text-5xl text-4xl font-extrabold text-center md:text-left leading-tight"
+        >
+          1,500,000+
+        </div>
+
+        <div class="font-sans text-center md:text-left">
+          Customers who use Landify UI Kit to build their new startup landing
+          page.
+        </div>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div class="flex flex-col items-center gap-y-8">
+          <img src="image/AirbnbLogo.png" alt="" />
+          <img src="image/GoogleLogo.png" alt="" />
+        </div>
+        <div class="flex flex-col items-center gap-y-8">
+          <img src="image/AmazonLogo.png" alt="" />
+          <img src="image/OLALogo.png" alt="" />
+        </div>
+        <div class="flex flex-col items-center gap-y-8">
+          <img src="image/FedExLogo.png" alt="" />
+          <img src="image/WalmartLogo.png" alt="" />
+        </div>
+        <div class="flex flex-col items-center gap-y-8">
+          <img src="image/MicrosoftLogo.png" alt="" />
+          <img src="image/OYOLogo.png" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <!--Phần 4-->
+
+    <div class="flex flex-col items-center gap-y-8 py-16">
+      <div class="flex flex-col gap-y-2 box-border w-[540px] pb-12">
+        <div
+          class="font-sans md:text-5xl text-4xl font-extrabold text-center leading-tight"
+        >
+          Tailor-made features
+        </div>
+        <div class="font-sans text-center text-lg">
+          Lorem ipsum is common placeholder text used to demonstrate the graphic
+          elements of a document or visual presentation.
+        </div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="flex flex-col items-center gap-y-6 box-border w-[350px]">
+          <img src="image/01.png" alt="" class="" />
+          <div class="font-sans font-semibold text-center text-2xl">
+            Robust workflow
+          </div>
+          <div class="font-sans text-center text-base">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat
+            nibh tristique ipsum.
+          </div>
+        </div>
+
+        <div class="flex flex-col items-center gap-y-6 box-border w-[350px]">
+          <img src="image/02.png" alt="" class="" />
+          <div class="font-sans font-semibold text-center text-2xl">
+            Flexibility
+          </div>
+          <div class="font-sans text-center text-base">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat
+            nibh tristique ipsum.
+          </div>
+        </div>
+
+        <div class="flex flex-col items-center gap-y-6 box-border w-[350px]">
+          <img src="image/03.png" alt="" class="" />
+          <div class="font-sans font-semibold text-center text-2xl">
+            User friendly
+          </div>
+          <div class="font-sans text-center text-base">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat
+            nibh tristique ipsum.
+          </div>
+        </div>
+
+        <div class="flex flex-col items-center gap-y-6 box-border w-[350px]">
+          <img src="image/04.png" alt="" class="" />
+          <div class="font-sans font-semibold text-center text-2xl">
+            Multiple layouts
+          </div>
+          <div class="font-sans text-center text-base">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat
+            nibh tristique ipsum.
+          </div>
+        </div>
+
+        <div class="flex flex-col items-center gap-y-6 box-border w-[350px]">
+          <img src="image/05.png" alt="" class="" />
+          <div class="font-sans font-semibold text-center text-2xl">
+            Better components
+          </div>
+          <div class="font-sans text-center text-base">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat
+            nibh tristique ipsum.
+          </div>
+        </div>
+
+        <div class="flex flex-col items-center gap-y-6 box-border w-[350px]">
+          <img src="image/06.png" alt="" class="" />
+          <div class="font-sans font-semibold text-center text-2xl">
+            Well organised
+          </div>
+          <div class="font-sans text-center">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat
+            nibh tristique ipsum.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Phần 5-->
+    <div class="flex flex-col items-center gap-y-8 py-16 bg-slate-100">
+      <div class="flex flex-col gap-y-2 box-border w-[540px]">
+        <div
+          class="font-sans md:text-5xl text-4xl font-extrabold text-center leading-tight"
+        >
+          Our Clients Speak
+        </div>
+        <div class="font-sans text-center text-lg">
+          We have been working with clients around the world.
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 m-10">
+        <div class="flex flex-col gap-y-4">
+          <div class="flex flex-col items-center">
+            <div
+              class="flex flex-col items-center gap-y-6 box-border w-[350px] rounded-xl bg-white p-10"
+            >
+              <div class="font-sans font-semibold text-center text-2xl">
+                Efficient Collaborating
+              </div>
+              <div class="font-sans text-center text-sm">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor
+                neque sed imperdiet nibh lectus feugiat nunc sem.
+              </div>
+            </div>
+            <div
+              class="w-0 h-0 border-l-[15px] border-l-transparent border-t-[20px] border-t-white border-r-[15px] border-r-transparent"
+            ></div>
+          </div>
+
+          <div class="flex flex-col items-center gap-y-2">
+            <img src="image/Picture.png" alt="" class="" />
+            <div class="font-sans font-bold text-center text-lg">
+              Jane Cooper
+            </div>
+            <div class="font-sans text-center text-sm">
+              CEO at ABC Corporation
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-y-4">
+          <div class="flex flex-col items-center">
+            <div
+              class="flex flex-col items-center gap-y-6 box-border w-[350px] rounded-xl bg-white p-10"
+            >
+              <div class="font-sans font-semibold text-center text-2xl">
+                Intuitive Design
+              </div>
+              <div class="font-sans text-center text-sm">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor
+                neque sed imperdiet nibh lectus feugiat nunc sem.
+              </div>
+            </div>
+            <div
+              class="w-0 h-0 border-l-[15px] border-l-transparent border-t-[20px] border-t-white border-r-[15px] border-r-transparent"
+            ></div>
+          </div>
+
+          <div class="flex flex-col items-center gap-y-2">
+            <img src="image/Picture.png" alt="" class="" />
+            <div class="font-sans font-bold text-center text-lg">
+              Jane Cooper
+            </div>
+            <div class="font-sans text-center text-sm">
+              CEO at ABC Corporation
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-y-4">
+          <div class="flex flex-col items-center">
+            <div
+              class="flex flex-col items-center gap-y-6 box-border w-[350px] rounded-xl bg-white p-10"
+            >
+              <div class="font-sans font-semibold text-center text-2xl">
+                Mindblowing Service
+              </div>
+              <div class="font-sans text-center text-sm">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor
+                neque sed imperdiet nibh lectus feugiat nunc sem.
+              </div>
+            </div>
+            <div
+              class="w-0 h-0 border-l-[15px] border-l-transparent border-t-[20px] border-t-white border-r-[15px] border-r-transparent"
+            ></div>
+          </div>
+
+          <div class="flex flex-col items-center gap-y-2">
+            <img src="image/Picture.png" alt="" class="" />
+            <div class="font-sans font-bold text-center text-lg">
+              Jane Cooper
+            </div>
+            <div class="font-sans text-center text-sm">
+              CEO at ABC Corporation
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-row justify-center items-center gap-x-4">
+        <div class="box-border w-[8px] h-[8px] rounded-full bg-cyan-400"></div>
+        <div
+          class="box-border w-[16px] h-[16px] rounded-full border-4 border-cyan-400"
+        ></div>
+        <div class="box-border w-[8px] h-[8px] rounded-full bg-cyan-400"></div>
+      </div>
+    </div>
+
+    <!--Phần 6-->
+
+    <div class="flex flex-col items-center justify-center gap-y-8 py-16">
+      <div class="flex md:flex-row flex-col items-center gap-y-2">
+        <div
+          class="font-sans text-5xl font-extrabold md:text-left text-center leading-tight box-border w-[540px]"
+        >
+          Enter the world of all fashion trends
+        </div>
+        <div
+          class="font-sans md:text-left text-center text-lg box-border w-[540px]"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis
+          scelerisque at quam congue posuere libero in sit quam. Consequat,
+          scelerisque non tincidunt sit lectus senectus.
+        </div>
+      </div>
+
+      <img src="image/CoverImage.png" alt="" class="" />
+    </div>
+
+    <!--Phần 7-->
+
+    <div
+      class="flex flex-col justify-center items-center gap-y-8 py-20 bg-cyan-50"
+    >
+      <div
+        class="font-sans md:text-5xl text-4xl font-extrabold text-left md:box-border md:w-[1080px] md:pb-12"
+      >
+        Some of my recent work
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-y-16">
+        <div class="flex flex-col items-left gap-y-4">
+          <div
+            class="flex flex-col justify-end items-center rounded-xl box-border w-[540px] h-[380px] bg-sky-200"
+          >
+            <img
+              src="image/iPhoneX.png"
+              alt=""
+              class=""
+              style="filter: drop-shadow(5px -5px 5px #29292a50)"
+            />
+          </div>
+
+          <div class="flex flex-col items-left gap-y-2">
+            <strong class="font-sans font-semibold text-left text-2xl">
+              Project Title
+            </strong>
+            <span class="font-sans text-left text-base">iOS, IoT</span>
+          </div>
+        </div>
+
+        <div class="flex flex-col items-left gap-y-4">
+          <div
+            class="flex flex-col justify-end items-center rounded-xl box-border w-[540px] h-[380px] bg-pink-200"
+          >
+            <img
+              src="image/GooglePixel2XL.png"
+              alt=""
+              class=""
+              style="filter: drop-shadow(5px -5px 5px #29292a50)"
+            />
+          </div>
+
+          <div class="flex flex-col items-left gap-y-2">
+            <strong class="font-sans font-semibold text-left text-2xl">
+              Project Title
+            </strong>
+            <span class="font-sans text-left text-base">Android, IoT</span>
+          </div>
+        </div>
+
+        <div class="flex flex-col items-left gap-y-4">
+          <div
+            class="flex flex-col justify-center items-end rounded-xl box-border w-[540px] h-[380px] bg-red-200"
+          >
+            <img src="image/Mockup.png" alt="" class="" />
+          </div>
+
+          <div class="flex flex-col items-left gap-y-2">
+            <strong class="font-sans font-semibold text-left text-2xl">
+              Project Title
+            </strong>
+            <span class="font-sans text-left text-base">Web app</span>
+          </div>
+        </div>
+
+        <div class="flex flex-col items-left gap-y-4">
+          <div
+            class="flex flex-col justify-center items-end rounded-xl box-border w-[540px] h-[380px] bg-orange-200"
+          >
+            <img src="image/Mockup.png" alt="" class="" />
+          </div>
+
+          <div class="flex flex-col items-left gap-y-2">
+            <strong class="font-sans font-semibold text-left text-2xl">
+              Project Title
+            </strong>
+            <span class="font-sans text-left text-base">Web app</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Phần 8-->
+    <div
+      class="flex md:flex-row flex-col items-center justify-center gap-x-8 gap-y-8 py-20"
+    >
+      <div
+        class="flex flex-col md:items-start items-center gap-y-2 box-border w-[540px]"
+      >
+        <div
+          class="font-sans md:text-5xl text-4xl font-extrabold text-center md:text-left leading-tight"
+        >
+          Our 18 years of achievements
+        </div>
+
+        <div class="font-sans text-center md:text-left text-lg">
+          With our super powers we have reached this
+        </div>
+      </div>
+      <div class="grid grid-cols-2 gap-8 md:box-border md:w-[540px]">
+        <div
+          class="flex md:flex-row flex-col items-center justify-start md:gap-x-4 gap-y-4"
+        >
+          <img src="image/01.png" alt="" />
+          <div class="flex flex-col items-center md:items-start">
+            <div class="font-sans font-bold text-left text-2xl">10,000+</div>
+            <div class="font-sans text-left text-base">Downloads per day</div>
+          </div>
+        </div>
+        <div
+          class="flex md:flex-row flex-col items-center justify-start md:gap-x-4 gap-y-4"
+        >
+          <img src="image/04.png" alt="" />
+          <div class="flex flex-col items-center md:items-start">
+            <div class="font-sans font-bold text-left text-2xl">2 Million</div>
+            <div class="font-sans text-left text-base">Users</div>
+          </div>
+        </div>
+        <div
+          class="flex md:flex-row flex-col items-center justify-start md:gap-x-4 gap-y-4"
+        >
+          <img src="image/05.png" alt="" />
+          <div class="flex flex-col items-center md:items-start">
+            <div class="font-sans font-bold text-left text-2xl">500+</div>
+            <div class="font-sans text-left text-base">Clients</div>
+          </div>
+        </div>
+        <div
+          class="flex md:flex-row flex-col items-center justify-start md:gap-x-4 gap-y-4"
+        >
+          <img src="image/07.png" alt="" />
+          <div class="flex flex-col items-center md:items-start">
+            <div class="font-sans font-bold text-left text-2xl">140</div>
+            <div class="font-sans text-left text-base">Countries</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Phần 9-->
+
+    <div
+      class="flex md:flex-row flex-col justify-center items-center md:py-16 pb-16 gap-8"
+    >
+      <div
+        class="flex flex-col justify-end items-center rounded-xl box-border w-[540px] h-[540px] bg-purple-200"
+      >
+        <img
+          src="image/iPhoneX1.png"
+          alt=""
+          class=""
+          style="filter: drop-shadow(5px -5px 5px #29292a50)"
+        />
+      </div>
+
+      <div
+        class="flex flex-col items-left justify-center gap-y-8 box-border w-[540px] px-12"
+      >
+        <div
+          class="font-sans md:text-5xl text-4xl font-extrabold text-left leading-tight"
+        >
+          Headline
+        </div>
+
+        <div class="font-sans text-left text-lg">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Condimentum
+          diam orci pretium a pharetra, feugiat cursus. Dictumst risus, sem
+          egestas odio cras adipiscing vulputate. Nisi, risus in suscipit non.
+          Non commodo volutpat, pharetra, vel.
+        </div>
+
+        <div
+          class="flex flex-row items-center text-purple-600 text-left text-base font-medium gap-x-2"
+        >
+          <p>Get started</p>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            class="w-5 h-5"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M2 10a.75.75 0 0 1 .75-.75h12.59l-2.1-1.95a.75.75 0 1 1 1.02-1.1l3.5 3.25a.75.75 0 0 1 0 1.1l-3.5 3.25a.75.75 0 1 1-1.02-1.1l2.1-1.95H2.75A.75.75 0 0 1 2 10Z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!--Phần 10-->
+    <div
+      class="flex justify-center items-center px-16 md:my-56 mb-28 my-5 text-white"
+    >
+      <div
+        class="flex md:box-border md:w-[1112px] md:h-[382px] rounded-xl bg-purple-400"
+      >
+        <div
+          class="flex flex-col md:flex-row justify-center items-center py-20 gap-8"
+        >
+          <div
+            class="flex flex-col items-left justify-center gap-y-8 md:box-border md:w-[540px] px-12"
+          >
+            <div
+              class="font-sans md:text-5xl text-4xl font-extrabold text-left leading-tight"
+            >
+              Headline
+            </div>
+
+            <div class="font-sans text-left text-lg">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Condimentum diam orci pretium a pharetra, feugiat cursus. Dictumst
+              risus, sem egestas odio cras adipiscing vulputate. Nisi, risus in
+              suscipit non. Non commodo volutpat, pharetra, vel.
+            </div>
+
+            <div
+              class="flex flex-row items-center text-left text-base font-medium gap-x-2"
+            >
+              <p>Get started</p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                class="w-5 h-5"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M2 10a.75.75 0 0 1 .75-.75h12.59l-2.1-1.95a.75.75 0 1 1 1.02-1.1l3.5 3.25a.75.75 0 0 1 0 1.1l-3.5 3.25a.75.75 0 1 1-1.02-1.1l2.1-1.95H2.75A.75.75 0 0 1 2 10Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </div>
+          </div>
+
+          <img
+            src="image/PhoneMockup.png"
+            alt=""
+            class=""
+            style="filter: drop-shadow(5px -5px 5px #29292a70)"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!--Phần 10-->
+
+    <div
+      class="flex justify-between gap-8 px-16 md:px-64 py-16 bg-violet-950 text-white"
+    >
+      <div class="flex flex-col justify-left items-left gap-6 mr:auto">
+        <img src="image/Logo2.png" alt="" class="self-start" />
+        <nav class="flex gap-6 text-base">
+          <div>Download</div>
+          <div>License</div>
+        </nav>
+        <nav class="flex md:flex-row flex-col gap-6 text-base">
+          <div class="flex flex-row gap-x-6">
+            <div>About</div>
+            <div>Features</div>
+            <div>Pricing</div>
+          </div>
+          <div class="flex flex-row gap-x-6">
+            <div>Careers</div>
+            <div>Help</div>
+            <div>Privacy Policy</div>
+          </div>
+        </nav>
+        <div class="text-left text-sm">
+          © 2020 Landify UI Kit. All rights reserved
+        </div>
+      </div>
+
+      <div class="flex flex-col justify-left items-left gap-4">
+        <nav class="flex gap-6 font-medium text-lg">Get the App</nav>
+        <img src="image/GooglePlayBadge.png" alt="" class="self-start" />
+        <img src="image/AppStoreBadge.png" alt="" class="self-start" />
+      </div>
+    </div>
+  </body>
+</html>
